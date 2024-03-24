@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome <%= user %>!</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dff0d8; /* Light green background */
+    margin:  0;
+    padding:  0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height:  100vh;
+}
+
+.welcome-container {
+    text-align: center;
+    padding:  20px;
+    border-radius:  10px;
+    background-color: #ffffff; /* White background for the container */
+    box-shadow:  0  0  10px rgba(0,  0,  0,  0.1);
+    max-width:  400px; /* Limit the maximum width of the container */
+    margin-bottom:  20px; /* Space between the container and the logout button */
+}
+
+h1 {
+    color: #3c763d; /* Dark green color for the heading */
+    font-weight: bold; /* Bold font weight for emphasis */
+}
+
+.logout-btn {
+    background-color: #337ab7; /* Blue background color */
+    color: #fff; /* White text color */
+    padding:  10px  20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius:  5px; /* Add border radius */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color  0.3s ease;
+    font-size:  16px; /* Increase font size */
+}
+
+.logout-btn:hover {
+    background-color: #286090; /* Darker blue color on hover */
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1>Welcome, <%= user %>!</h1>
+    </div>
+    <button id="logoutBtn" class="logout-btn" onclick="logout()">Logout</button>
+    <script>
+        function logout() {
+          // Perform any necessary logout actions
+          // For example, redirect to the logout route
+          window.location.href = '/logout';
+        }
+      </script>
+</body>
+
+</html>
